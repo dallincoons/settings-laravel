@@ -1,0 +1,58 @@
+{
+    "name": "smst/settings-laravel",
+    "description": "Smartstock settings implementation for the Laravel framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dallin Coons",
+            "email": "dallin@websolutionsnyc.com"
+        }
+    ],
+    "require": {
+        "smst/settings" : "dev-master",
+        "smst/commons" : "dev-master",
+        "wsnyc/classfinder": "^1.3",
+        "ramsey/uuid": "^3.7"
+    },
+    "require-dev": {
+        "smst/testing": "dev-master",
+        "orchestra/testbench": "~3.0",
+        "phpunit/phpunit": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "SMST\\SettingsLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SMST\\SettingsLaravel\\Tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:websolutionsnyc/smst-settings.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:websolutionsnyc/smst-commons.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:websolutionsnyc/smst-testing.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:websolutionsnyc/classfinder.git"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SMST\\SettingsLaravel\\ServiceProvider"
+            ]
+        }
+    }
+}
